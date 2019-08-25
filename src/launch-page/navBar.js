@@ -40,7 +40,7 @@ function NavBar() {
 		right: '175px',
 		padding: '0px',
 		margin: '0px',
-		color: '#EFEFEF',
+		color: '#F5F5DC',
 		fontWeight: 'bold'
 	}
 
@@ -52,7 +52,7 @@ function NavBar() {
 		right: '40px',
 		padding: '0px',
 		margin: '0px',
-		color: '#EFEFEF',
+		color: '#F5F5DC',
 		fontWeight: 'bold',
 	}
 
