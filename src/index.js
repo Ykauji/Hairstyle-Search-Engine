@@ -3,15 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ToDoItem from './ToDoItem'
+// Should reorganize this as single launch-page item.
 import ImageHeader from './launch-page/imageHeader'
 import BottomBar from './launch-page/bottomBar'
 import NavBar from './launch-page/navBar'
+import HairstyleGrid from './launch-page/hairstyleGrid'
 
 ReactDOM.render(
 	<div className="todo-list">
 		<NavBar />
-		<ImageHeader />
+		<ImageHeader image='./hairombre.jpeg' overlayText='Find the hairstyle of your dreams!'/>
+		<hr style={{
+		    color: '#000000',
+		    width: '25%',
+		    backgroundColor: '#000000',
+		    height: .05,
+		    position: 'relative',
+		    top: '-100px',
+		    borderColor : '#000000'}}
+		/>
+
+		<HairstyleGrid />
 		<BottomBar />
 	</div>
 

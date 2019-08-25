@@ -2,7 +2,7 @@ import React from 'react'
 import {Dimensions} from 'react';
 import Button from '@material-ui/core/Button';
 
-function ImageHeader() {
+function ImageHeader(props) {
 	
 	const imageText = {
 		position: 'absolute',
@@ -33,10 +33,10 @@ function ImageHeader() {
 
 	return (
 			<div class="food-image">
-				<img src="./hairombre.jpeg" alt="jiji is a fool" style={{width: '100%'}} />
-				<h1 style={imageText}><span style={spanStyle}>Find the hairstyle of your dreams!</span></h1>
+				<img src={props.image} alt="jiji is a fool" style={{width: '100%'}} />
+				<h1 style={imageText}><span style={spanStyle}>{props.overlayText}</span></h1>
 				<div width='50px'>
-					<Button variant="contained" style={freeTrialButton}>Free Trial</Button>
+					<Button variant="contained" style={freeTrialButton}>Register Now!</Button>
 				</div>
 
 			</div>
