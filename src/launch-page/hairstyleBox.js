@@ -1,6 +1,7 @@
 import React from 'react' 
 import { borders } from '@material-ui/system';
 import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button';
 
 class HairstyleBox extends React.Component {
 	constructor() {
@@ -8,7 +9,9 @@ class HairstyleBox extends React.Component {
 
 	}
 
-	
+	clickImage() {
+		console.log("clicked!");
+	}
 
 	render() {
 		const textStyle = {
@@ -19,6 +22,7 @@ class HairstyleBox extends React.Component {
 			fontSize: '10px',
 			fontStyle: 'italic',
 		}
+
 		const spanStyle = {
 		   color: 'white', 
 		   font: 'bold 20px/42px Helvetica, Sans-Serif',
@@ -30,10 +34,13 @@ class HairstyleBox extends React.Component {
 		   position: 'relative',
 		   top: '-53px',
 		}
+		
+
+
 		return (
 			<div>
 				<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='300px' height='400px'>
-					<img src={this.props.imageName} alt="hair" width='100%' height='100%'/>
+						<img src={this.props.imageName} alt="hair" width='100%' height='100%' onClick={this.clickImage}/>
 				</Box> 
 				<h1 style={textStyle}><span style={spanStyle}>{this.props.styleName}</span></h1>
 			</div>

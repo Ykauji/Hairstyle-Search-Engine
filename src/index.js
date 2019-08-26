@@ -19,13 +19,49 @@ const line = {
 	borderColor : '#000000',
 }
 
+const gridMale = [
+{
+	image: 'menhair.jpeg',
+	styleName: 'Men medium length',
+},
+{
+	image: 'shortoo2.jpg',
+	styleName: 'Men medium length',
+},
+{
+	image: 'longhairmen.jpg',
+	styleName: 'Men medium length',
+},
+{
+	image: 'hair4.jpg',
+	styleName: 'Men medium length',
+}];
+
+const gridFemale = [
+{
+	image: 'jiji1.png',
+	styleName: 'Men medium length',
+},
+{
+	image: 'jiji2.png',
+	styleName: 'Men medium length',
+},
+{
+	image: 'jiji3.png',
+	styleName: 'Men medium length',
+},
+{
+	image: 'jiji4.png',
+	styleName: 'Men medium length',
+}];
+
 ReactDOM.render(
 	<div className="todo-list">
 		<NavBar />
 		<ImageHeader image='./hairombre.jpeg' overlayText='Find the hairstyle of your dreams!'/>
-		<HairstyleGrid/>
+		<HairstyleGrid hairStyles={gridMale}/>
 		<BottomBar />
-		<HairstyleGrid/>
+		<HairstyleGrid hairStyles={gridFemale}/>
 		<BottomBar />
 		<div style={{width: '100%', height: '200px',backgroundColor: '#EFEFEF', position: 'relative', top: '-100px',}}> 
 			<h1 style={{color: 'black',textAlign: 'center'}}>This is a test!</h1>
