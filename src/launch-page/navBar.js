@@ -8,9 +8,9 @@ class NavBar extends React.Component {
 	render() {
 		const titleStyle = {
 		textAlign: 'center',
-		top: '-20px',
+		top: '-23px',
 		left: '-40px',
-		fontSize: '30px',
+		fontSize: '25px',
 		position: 'absolute',
 		width: '100%',
 		height: '100%',
@@ -18,29 +18,29 @@ class NavBar extends React.Component {
 
 		const scissorIcon = {
 			position: 'absolute',
-			height: '75px',
-			width: '75px',
+			height: '55px',
+			width: '55px',
 			transform: 'rotate(270deg)',
-			left: '700px',
+			left: '590px',
 			top: '0px',
 
 		}
 
 		const menu = {
 			position: 'absolute',
-			height: '40px',
-			width: '50px',
-			left: '15px',
-			top: '20px',
+			height: '33px',
+			width: '45px',
+			left: '5px',
+			top: '8px',
 
 		}
 		
 		const login = {
 			textAlign: 'center',
-			fontSize: '20px',
+			fontSize: '15px',
 			position: 'absolute',
-			top: '22px',
-			right: '175px',
+			top: '15px',
+			right: '180px',
 			padding: '0px',
 			margin: '0px',
 			color: '#F5F5DC',
@@ -49,10 +49,10 @@ class NavBar extends React.Component {
 
 		const register = {
 			textAlign: 'center',
-			fontSize: '20px',
+			fontSize: '15px',
 			position: 'absolute',
-			top: '22px',
-			right: '40px',
+			top: '15px',
+			right: '50px',
 			padding: '0px',
 			margin: '0px',
 			color: '#F5F5DC',
@@ -61,7 +61,7 @@ class NavBar extends React.Component {
 
 
 		return (
-			<div style={{height: '75px', backgroundColor:'#272e3b', width: '100%'}}>
+			<div style={{height: '50px', backgroundColor:'#272e3b', width: '85%', marginLeft: 'auto', marginRight: 'auto',position:'relative',top:'0px'}}>
 				<h4 style={titleStyle}>InStyle</h4>
 				<img src= './scissors.png' style={scissorIcon} />
 				<img src="./menu.jpg" style={menu}/>

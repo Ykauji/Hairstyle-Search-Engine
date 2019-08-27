@@ -8,6 +8,7 @@ import ImageHeader from './launch-page/imageHeader'
 import BottomBar from './launch-page/bottomBar'
 import NavBar from './launch-page/navBar'
 import HairstyleGrid from './launch-page/hairstyleGrid'
+import Slider from './launch-page/image-slider/slider'
 
 const line = {
 	color: '#000000',
@@ -66,7 +67,6 @@ ReactDOM.render(
 		<div style={{width: '100%', height: '200px',backgroundColor: '#EFEFEF', position: 'relative', top: '-100px',}}> 
 			<h1 style={{color: 'black',textAlign: 'center'}}>This is a test!</h1>
 		</div>
-		
 	</div>
 
 

@@ -39,7 +39,7 @@ class HairstyleBox extends React.Component {
 
 		return (
 			<div>
-				<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='300px' height='400px'>
+				<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='200px' height='250px'>
 						<img src={this.props.imageName} alt="hair" width='100%' height='100%' onClick={this.clickImage}/>
 				</Box> 
 				<h1 style={textStyle}><span style={spanStyle}>{this.props.styleName}</span></h1>

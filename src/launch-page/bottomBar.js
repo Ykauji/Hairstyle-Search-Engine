@@ -7,7 +7,7 @@ class BottomBar extends React.Component {
 
 	render() {
 		return (
-		<div style={{height: "150px", postion: 'absolute'}}>
+		<div style={{height: "0px", postion: 'absolute'}}>
 			
 		</div>
 		)

@@ -27,8 +27,8 @@ class HairstyleGrid extends React.Component {
 			top: '-50px',
 		}
 
-		const hairBoxes = this.props.hairStyles.map(box => {
-			return <HairstyleBox imageName={box.image} styleName={box.styleName}/>
+		const hairBoxes = this.props.hairStyles.map((box,i) => {
+			return <HairstyleBox imageName={box.image} styleName={box.styleName} key={i}/>
 		})
 
 		return (
