@@ -10,7 +10,7 @@ class Slider extends React.Component {
       images: [
         "https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1535&q=80",
         "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-        "https://images.unsplash.com/photo-1542905538-96a3f185f597?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+        "https://images.unsplash.com/photo-1496721398107-986c99ba7126?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
         "https://images.unsplash.com/photo-1468488718849-422a2a5efc03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
         "https://images.unsplash.com/photo-1559294850-1a7f808bba02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       ],
@@ -23,7 +23,7 @@ class Slider extends React.Component {
     if (this.state.currentIndex === 0) {
       this.setState(prevState => ({
         currentIndex: this.state.images.length-1,
-        translateValue: (-(this.state.images.length-2) * this.slideWidth()),
+        translateValue: (-(this.state.images.length-1) * this.slideWidth()),
       }));
       return;
     }
@@ -55,7 +55,7 @@ class Slider extends React.Component {
 
   
   render() {
-
+    
     return (
       <div className="slider">
         <div className="slider-wrapper"

@@ -19,8 +19,10 @@ class HairstyleBox extends React.Component {
 			textAlign: 'center',
 			position: 'relative',
 			fontFamily: 'Helvitica',
-			fontSize: '10px',
+			fontSize: '15px',
 			fontStyle: 'italic',
+			position: 'relative',
+			top: '-25px',
 		}
 
 		const spanStyle = {
@@ -35,14 +37,23 @@ class HairstyleBox extends React.Component {
 		   top: '-53px',
 		}
 		
+		const borderBox = {
+			width: '225px',
+			height: '350px',
+		
+		}
 
+		const boxStyle = {
+			backgroundColor: 'rgba(240,240,240,.1)'
+		}
 
 		return (
-			<div>
-				<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='200px' height='250px'>
-						<img src={this.props.imageName} alt="hair" width='100%' height='100%' onClick={this.clickImage}/>
+			<div style={borderBox}>
+				<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='225px' height='275px' style={boxStyle}>
+						<img src={this.props.imageName} alt="hair" width='100%' height='85%' onClick={this.clickImage}/>
+						<h6 style={textStyle}>{this.props.styleName}</h6>
 				</Box> 
-				<h1 style={textStyle}><span style={spanStyle}>{this.props.styleName}</span></h1>
+				
 			</div>
 		)
 	}

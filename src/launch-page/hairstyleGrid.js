@@ -2,6 +2,17 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid';
 import './hairstyleGrid.css'
 import HairstyleBox from './hairstyleBox'
+import gql from 'graphql-tag'
+import { Query } from 'react-apollo'
+
+const HAIRSTYLE_QUERY = gql`
+	query HairstyleQuery {
+		hairstyles {
+			name
+			image
+		}
+	}
+`;
 
 // Formats 4 per line.
 class HairstyleGrid extends React.Component {
@@ -17,7 +28,7 @@ class HairstyleGrid extends React.Component {
 		    alignItems: "center",
 		    position: 'relative',
 		    top: '-75px',
-		    spacing: '0',
+		    justify: 'space-evenly'
 		}
 		
 		const browseText = {
@@ -26,15 +37,29 @@ class HairstyleGrid extends React.Component {
 			position: 'relative',
 			top: '-50px',
 		}
-
+		/*
 		const hairBoxes = this.props.hairStyles.map((box,i) => {
-			return <HairstyleBox imageName={box.image} styleName={box.styleName} key={i}/>
-		})
+			return <HairstyleBox imageName={box.image} styleName={box.name} key={i}/>
+		})	*/
 
 		return (
 			<div>
-				<Grid className='parent' justify='space-evenly' style={gridStyle} container>
-					{hairBoxes}
+				<Grid className='parent' style={gridStyle} container>
+				<Query query={HAIRSTYLE_QUERY}>
+					{({ loading, error, data }) => {
+						if (loading) return <h4>Loading...</h4>
+						if (error) console.log(error); 
+						console.log(data.image);
+						return <React.Fragment> 
+							{
+								data.hairstyles.map(hair => (
+									<HairstyleBox imageName={hair.image} styleName={hair.name}/>
+								))
+							}
+						</React.Fragment>
+					}}
+				</Query>
+					
 				</Grid>
 			</div>
 		)

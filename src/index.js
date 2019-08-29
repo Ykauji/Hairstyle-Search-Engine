@@ -10,6 +10,19 @@ import NavBar from './launch-page/navBar'
 import HairstyleGrid from './launch-page/hairstyleGrid'
 import Slider from './launch-page/image-slider/slider'
 
+// Client to connect w/ GraphQL API
+import ApolloClient from 'apollo-boost';
+import {ApolloProvider} from 'react-apollo'
+
+const client = new ApolloClient({
+  uri: 'http://localhost:5000/graphql',
+});
+
+
+// Query for hairstyles
+
+
+// Random line. 
 const line = {
 	color: '#000000',
 	width: '25%',
@@ -20,54 +33,57 @@ const line = {
 	borderColor : '#000000',
 }
 
+// Test data.
 const gridMale = [
 {
 	image: 'menhair.jpeg',
-	styleName: 'Men medium length',
+	name: "Men's short",
 },
 {
 	image: 'shortoo2.jpg',
-	styleName: 'Men medium length',
+	name: "Men's short",
 },
 {
 	image: 'longhairmen.jpg',
-	styleName: 'Men medium length',
+	name: "Men's Long Hair",
 },
 {
 	image: 'hair4.jpg',
-	styleName: 'Men medium length',
+	name: 'Men medium length',
 }];
 
 const gridFemale = [
 {
 	image: 'jiji1.png',
-	styleName: 'Men medium length',
+	name: 'Fools medium length',
 },
 {
 	image: 'jiji2.png',
-	styleName: 'Men medium length',
+	name: 'Fool style',
 },
 {
 	image: 'jiji3.png',
-	styleName: 'Men medium length',
+	name: 'The fool',
 },
 {
 	image: 'jiji4.png',
-	styleName: 'Men medium length',
+	name: 'The cat',
 }];
 
 ReactDOM.render(
-	<div className="todo-list">
-		<NavBar />
-		<ImageHeader image='./hairombre.jpeg' overlayText='Find the hairstyle of your dreams!'/>
-		<HairstyleGrid hairStyles={gridMale}/>
-		<BottomBar />
-		<HairstyleGrid hairStyles={gridFemale}/>
-		<BottomBar />
-		<div style={{width: '100%', height: '200px',backgroundColor: '#EFEFEF', position: 'relative', top: '-100px',}}> 
-			<h1 style={{color: 'black',textAlign: 'center'}}>This is a test!</h1>
+	<ApolloProvider client={client}>
+		<div className="todo-list">
+			<NavBar />
+			<ImageHeader image='./hairombre.jpeg' overlayText='Find the hairstyle of your dreams!'/>
+			<HairstyleGrid hairStyles={gridFemale}/>
+			<BottomBar />
+			<HairstyleGrid hairStyles={gridFemale}/>
+			<BottomBar />
+			<div style={{width: '100%', height: '200px',backgroundColor: '#EFEFEF', position: 'relative', top: '-100px',}}> 
+				<h1 style={{color: 'black',textAlign: 'center'}}>This is a test!</h1>
+			</div>
 		</div>
-	</div>
+	</ApolloProvider>
 
 
 	, document.getElementById('root'));
