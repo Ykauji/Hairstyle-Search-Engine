@@ -5,11 +5,21 @@ import HairstyleBox from './hairstyleBox'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 
+// One big query so I can pass down instead of requerying. 
 const HAIRSTYLE_QUERY = gql`
 	query HairstyleQuery {
 		hairstyles {
+			id
+			description
 			name
 			image
+			likes 
+			stylist {
+				id
+				name
+				image
+				description
+			}
 		}
 	}
 `;
@@ -24,11 +34,10 @@ class HairstyleGrid extends React.Component {
 		// This should have as input an array of hairstyles to display. maybe only random 12? 
 		const gridStyle = {
 		    direction: "row",
-		    justify: "center",
+		    justify: 'space-evenly',
 		    alignItems: "center",
 		    position: 'relative',
 		    top: '-75px',
-		    justify: 'space-evenly'
 		}
 		
 		const browseText = {
@@ -37,28 +46,25 @@ class HairstyleGrid extends React.Component {
 			position: 'relative',
 			top: '-50px',
 		}
+
 		/*
 		const hairBoxes = this.props.hairStyles.map((box,i) => {
-			return <HairstyleBox imageName={box.image} styleName={box.name} key={i}/>
+			return <HairstyleBox className='child' imageName={box.image} styleName={box.name} key={i}/>
 		})	*/
 
 		return (
 			<div>
-				<Grid className='parent' style={gridStyle} container>
-				<Query query={HAIRSTYLE_QUERY}>
-					{({ loading, error, data }) => {
-						if (loading) return <h4>Loading...</h4>
-						if (error) console.log(error); 
-						console.log(data.image);
-						return <React.Fragment> 
-							{
-								data.hairstyles.map(hair => (
-									<HairstyleBox imageName={hair.image} styleName={hair.name}/>
+				<Grid className='parent' container>
+					<Query query={HAIRSTYLE_QUERY}>
+						{({ loading, error, data }) => {
+							if (loading) return <h4>Loading...</h4>
+							if (error) console.log(error); 
+							console.log(data);
+								return data.hairstyles.map((hair,i) => (
+										<HairstyleBox imageName={hair.image} styleName={hair.name}  key={i}/>
 								))
-							}
-						</React.Fragment>
-					}}
-				</Query>
+						}}
+					</Query>
 					
 				</Grid>
 			</div>

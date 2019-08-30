@@ -3,16 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-// Should reorganize this as single launch-page item.
-import ImageHeader from './launch-page/imageHeader'
-import BottomBar from './launch-page/bottomBar'
-import NavBar from './launch-page/navBar'
-import HairstyleGrid from './launch-page/hairstyleGrid'
-import Slider from './launch-page/image-slider/slider'
+
+// Load pages.
+import LaunchPage from './launch-page/launchPage'
+import NotFoundPage from './error-page/404'
+import HairstylePage from './hairstyles-page/hairstyles'
 
 // Client to connect w/ GraphQL API
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo'
+
+// React Router DOM 
+import {
+	BrowserRouter as Router, 
+	Route, 
+	Switch, 
+	Link, 
+	Redirect,
+} from 'react-router-dom'
+
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
@@ -33,56 +42,16 @@ const line = {
 	borderColor : '#000000',
 }
 
-// Test data.
-const gridMale = [
-{
-	image: 'menhair.jpeg',
-	name: "Men's short",
-},
-{
-	image: 'shortoo2.jpg',
-	name: "Men's short",
-},
-{
-	image: 'longhairmen.jpg',
-	name: "Men's Long Hair",
-},
-{
-	image: 'hair4.jpg',
-	name: 'Men medium length',
-}];
-
-const gridFemale = [
-{
-	image: 'jiji1.png',
-	name: 'Fools medium length',
-},
-{
-	image: 'jiji2.png',
-	name: 'Fool style',
-},
-{
-	image: 'jiji3.png',
-	name: 'The fool',
-},
-{
-	image: 'jiji4.png',
-	name: 'The cat',
-}];
-
 ReactDOM.render(
 	<ApolloProvider client={client}>
-		<div className="todo-list">
-			<NavBar />
-			<ImageHeader image='./hairombre.jpeg' overlayText='Find the hairstyle of your dreams!'/>
-			<HairstyleGrid hairStyles={gridFemale}/>
-			<BottomBar />
-			<HairstyleGrid hairStyles={gridFemale}/>
-			<BottomBar />
-			<div style={{width: '100%', height: '200px',backgroundColor: '#EFEFEF', position: 'relative', top: '-100px',}}> 
-				<h1 style={{color: 'black',textAlign: 'center'}}>This is a test!</h1>
-			</div>
-		</div>
+		<Router>
+			<Switch>
+				<Route exact path="/" component={LaunchPage}/>
+				<Route exact path="/404" component={NotFoundPage}/>
+				<Route path='/hairstyles' component={HairstylePage}/>
+				<Redirect to="/404"/>
+			</Switch>
+		</Router>
 	</ApolloProvider>
 
 
