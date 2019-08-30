@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../launch-page/navBar'
+import DropdownGrid from './dropdown-grid/dropdownGrid'
 
 class HairstylePage extends React.Component {
 	constructor() {
@@ -8,8 +9,10 @@ class HairstylePage extends React.Component {
 	
 	render() {
 		return (
-			<NavBar />
-			
+			<div>
+				<NavBar />
+				<DropdownGrid />
+			</div>
 		)
 	}
 }
