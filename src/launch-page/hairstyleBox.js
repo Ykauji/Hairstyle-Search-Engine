@@ -3,6 +3,7 @@ import { borders } from '@material-ui/system';
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import './hairstyleGrid.css'
+import { Link } from 'react-router-dom'
 
 class HairstyleBox extends React.Component {
 	constructor() {
@@ -37,10 +38,12 @@ class HairstyleBox extends React.Component {
 
 		return (
 			<div>
-				<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='225px' height='275px' style={boxStyle}>
-						<img src={this.props.imageName} alt="hair" width='100%' height='85%' onClick={this.clickImage}/>
-						<h6 style={textStyle}>{this.props.styleName}</h6>
-				</Box> 
+				<Link to="/hairstyles">
+					<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='225px' height='275px' style={boxStyle}>
+							<img src={this.props.imageName} alt="hair" width='100%' height='85%' onClick={this.clickImage}/>
+							<h6 style={textStyle}>{this.props.styleName}</h6>
+					</Box> 
+				</Link>
 				
 			</div>
 		)
