@@ -50,7 +50,7 @@ let HAIRSTYLE_QUERY = gql`
 class HairstyleGrid extends React.Component {
 	constructor() {
 		super();
-		// Sets query parameters.
+		// Sets query parameters. Should do this in parent!
 		this.state = {
 			id: undefined,
 			name: undefined,
@@ -68,12 +68,9 @@ class HairstyleGrid extends React.Component {
 
 	render() {
 		// This should have as input an array of hairstyles to display. maybe only random 12? 
-		const gridStyle = {
-		    direction: "row",
-		    justify: 'space-evenly',
-		    alignItems: "center",
-		    position: 'relative',
-		    top: '-75px',
+		const divStyle = {
+		    margin: 'auto', 
+			width: '80%',
 		}
 		
 		const browseText = {
@@ -82,16 +79,11 @@ class HairstyleGrid extends React.Component {
 			position: 'relative',
 			top: '-50px',
 		}
-
-		/*
-		const hairBoxes = this.props.hairStyles.map((box,i) => {
-			return <HairstyleBox className='child' imageName={box.image} styleName={box.name} key={i}/>
-		})	*/
 		
 		return (
-			<div>
-				<Grid className='parent' container>
-					<Query query={HAIRSTYLE_QUERY} variables={this.state}>
+			<div style={divStyle}>
+				<Grid className='parent' container spacing={3}>
+					<Query query={HAIRSTYLE_QUERY} variables={this.props.queryState || {}}>
 						{({ loading, error, data }) => {
 							if (loading) return <h4>Loading...</h4>
 							if (error) console.log(error); 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 class NavBar extends React.Component {
 	constructor() {
@@ -9,7 +10,7 @@ class NavBar extends React.Component {
 		const titleStyle = {
 		textAlign: 'center',
 		top: '-23px',
-		left: '-40px',
+		left: '-1.9%',
 		fontSize: '25px',
 		position: 'absolute',
 		width: '100%',
@@ -21,7 +22,7 @@ class NavBar extends React.Component {
 			height: '55px',
 			width: '55px',
 			transform: 'rotate(270deg)',
-			left: '590px',
+			left: '49.75%',
 			top: '0px',
 
 		}
@@ -61,9 +62,14 @@ class NavBar extends React.Component {
 
 
 		return (
-			<div style={{height: '50px', backgroundColor:'#272e3b', width: '85%', marginLeft: 'auto', marginRight: 'auto',position:'relative',top:'0px'}}>
-				<h4 style={titleStyle}>InStyle</h4>
-				<img src= './scissors.png' style={scissorIcon} />
+			<div style={{height: '50px', backgroundColor:'#272e3b', width: '100%', marginLeft: 'auto', marginRight: 'auto',position:'relative',top:'0px'}}>
+				<div>
+					<Link to="/" style={{color: '#F5F5DC'}}>
+						<h4 style={titleStyle}>InStyle</h4>
+						<img src= './scissors.png' style={scissorIcon} />
+					</Link>
+				</div>
+			
 				<img src="./menu.jpg" style={menu}/>
 				<Button style={login}>Login</Button>
 				<Button style={register}>Register</Button>

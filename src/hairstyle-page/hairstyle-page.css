@@ -1,0 +1,26 @@
+body {
+  margin: 0px;
+  background-color: #EFEFEF;
+}
+.mainNavigation {
+  position: fixed;
+  float: none;
+  margin: 0px;
+  padding-top: 1%;
+  height: 100%;
+  width: 40%;
+}
+.mainNavigation li {
+  list-style: none;
+  font-size: 1.5em;
+  padding-left: 35%;
+}
+.otherContent {
+  float: right;
+  margin: 0px;
+  padding-top: 0%;
+  padding-bottom: 50%;
+  padding-left: 43%;
+  padding-right: 0%;
+
+}

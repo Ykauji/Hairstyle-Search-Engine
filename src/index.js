@@ -7,7 +7,8 @@ import * as serviceWorker from './serviceWorker';
 // Load pages.
 import LaunchPage from './launch-page/launchPage'
 import NotFoundPage from './error-page/404'
-import HairstylePage from './hairstyles-page/hairstyles'
+import HairstylesPage from './hairstyles-page/hairstyles'
+import HairstylePage from './hairstyle-page/hairstylePage'
 
 // Client to connect w/ GraphQL API
 import ApolloClient from 'apollo-boost';
@@ -48,7 +49,8 @@ ReactDOM.render(
 			<Switch>
 				<Route exact path="/" component={LaunchPage}/>
 				<Route exact path="/404" component={NotFoundPage}/>
-				<Route path='/hairstyles' component={HairstylePage}/>
+				<Route path='/hairstyles' component={HairstylesPage}/>
+				<Route path='/hairstyle' component={HairstylePage}/>
 				<Redirect to="/404"/>
 			</Switch>
 		</Router>

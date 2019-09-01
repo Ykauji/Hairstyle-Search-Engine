@@ -2,6 +2,7 @@ import React from 'react'
 import {Dimensions} from 'react';
 import Button from '@material-ui/core/Button';
 import Slider from './image-slider/slider'
+import { Link } from 'react-router-dom'
 
 class ImageHeader extends React.Component {
 	constructor() {
@@ -9,11 +10,11 @@ class ImageHeader extends React.Component {
 	}
 	render() {
 		const imageText = {
-		position: 'absolute',
+		position: 'relative',
 		color: '#EFEFEF',
 		textAlign: 'center',
 		width: '100%',
-		top: '50px',
+		top: '-200px',
 		}
 
 		const spanStyle = {
@@ -26,11 +27,12 @@ class ImageHeader extends React.Component {
 		}
 
 		const freeTrialButton = {
+			position: 'relative',
 			color: 'rgba(239, 239, 239, 1)',
 			width: '300px',
 			height: '65px',
 			background: 'rgba(135, 255, 255, .5)',
-			top: '-250px',
+			top: '-180px',
 			left: '40%',
 			justifyContent: 'center',
 			textAlign: 'center',
@@ -40,9 +42,11 @@ class ImageHeader extends React.Component {
 		return (
 				<div className="food-image">
 					<Slider />
-					<h1 style={imageText}><span style={spanStyle}>{this.props.overlayText}</span></h1>
+					{/*<h6 style={imageText}><span style={spanStyle}>{this.props.overlayText}</span></h6>}*/}
 					<div style={{margin: 'auto'}}>
-						<Button variant="contained" style={freeTrialButton}>Register Now!</Button>
+						<Link to='/hairstyles' style={{ textDecoration: 'none' }}>
+							<Button variant="contained" style={freeTrialButton}>Browse Now!</Button>
+						</Link>
 					</div>
 
 				</div>

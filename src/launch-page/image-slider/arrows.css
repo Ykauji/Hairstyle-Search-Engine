@@ -33,7 +33,7 @@ i {
 
 .slider {
   position: relative;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   height: 600px;
   overflow: hidden;
