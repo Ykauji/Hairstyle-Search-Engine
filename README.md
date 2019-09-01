@@ -1,3 +1,17 @@
+Web application that allows you to browse hairstyles w/ multiple parameters i.e Length, Color, Style, Face shape etc. By simply entering your desired attributes it will display the hairstyles that most match with your query. i.e Square face, short hair, curly hair, male, etc. The goal is that the quality of what you are finding will be greater b/c of hairstylists labelling hairstyles to particular features (curly hair, square face). Also I would like to make the UI as seamless and quick as possible which is reliant on keeping my backend queries as quick and efficient as possible. 
+
+TechStack: 
+Frontend: React, Material UI, CSS, HTML
+Backend: PostgreSQL, Node JS, GraphQL 
+
+Features to be implemented: 
+- Pagination 
+- Ranking heuristics
+- Stylist && Salon pages 
+- Reservation API? 
+- Recommendations (ML) ? <- based on likes? User -> Likes -> {params} 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
