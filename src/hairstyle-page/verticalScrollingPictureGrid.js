@@ -19,35 +19,31 @@ class VerticalScrollingPictureGrid extends React.Component {
 		return(
 		<div>
 			<div className='mainNavigation'>
-			  <h1 style={textStyle}>Hairstyle-Name</h1>
+			  <h1 style={textStyle}>{this.props.name ? this.props.name : 'No name'}</h1>
 			  <h6 style={textStyle}>
-				<p>Description here Lorem ipsum dolor sit amet, consectetur
-				    <br />adipiscing elit. Vivamus ante magna, malesuada
-				    <br />nec ligula eget, hendrerit porttitor mauris.
-				    <br />Praesent in.
+				<p>{this.props.description ? this.props.description : 'No description'}
 			  	</p>
-
-			  	<h1>Hair Traits:</h1>
-			  	<h3>Gender: Male</h3>
-			  	<h3>Length: Long</h3>
-			  	<h3>Thickness: Thick</h3>
-			  	<h3>Curliness: Curly</h3>
-			  	<h3>Color: Black</h3>
 			  </h6>
 
+			  	<h2 style={textStyle}>Hair Traits:</h2>
+			  	<h5 style={textStyle}>Gender: {this.props.gender}</h5>
+			  	<h5 style={textStyle}>Length: {this.props.length}</h5>
+			  	<h5 style={textStyle}>Thickness: {this.props.thickness}</h5>
+			  	<h5 style={textStyle}>Curliness: {this.props.curliness}</h5>
+			  	<h5 style={textStyle}>Color: {this.props.color}</h5>
+
 				
-			<h6 style={textStyle}>
-				<h2>Stylist Tips:</h2>
-			  	<h3>Great for round faces!</h3>
-			  	<h3>Recommended for people with curly hair</h3>
-			  	<h3>High maintainence!</h3>
-			</h6>
+				<h2 style={textStyle}>Stylist Tips:</h2>
+			  	<h6 style={textStyle}>Great for round faces!</h6>
+			  	<h6 style={textStyle}>Recommended for people with curly hair</h6>
+			  	<h6 style={textStyle}>High maintainence!</h6>
 
 		
 
 			  
 			</div>
 			<div className='otherContent'>
+			  <img style={imageStyle} src={this.props.image}/>
 			  <img style={imageStyle} src="https://images.unsplash.com/photo-1497470288371-3a7b5a82a048?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
 			  <img style={imageStyle} src="https://images.unsplash.com/photo-1519678446913-040d6fcbf3d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="shom"/>
 			  <img style={imageStyle} src="https://images.unsplash.com/photo-1512232207266-d100b35fd4de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/>

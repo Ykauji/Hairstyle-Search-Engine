@@ -13,7 +13,7 @@ class HairstyleBox extends React.Component {
 			stylistId : 0,
 			name : "potato",
 			image : "tomato",
-
+			
 		}
 	}
 
@@ -39,7 +39,20 @@ class HairstyleBox extends React.Component {
 
 		return (
 			<Grid item xs={3}>
-				<Link to="/hairstyle">
+				<Link to={{
+					pathname: '/hairstyle',
+					state: {
+						name: this.props.styleName,
+						description: this.props.description,
+						image: this.props.imageName,
+						gender: this.props.gender, 
+						length: this.props.length,
+						thickness: this.props.thickness,
+						curliness: this.props.perm,
+						color: this.props.color,
+					}
+					
+				}}>
 					<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='225px' height='275px' style={boxStyle}>
 							<img src={this.props.imageName} alt="hair" width='100%' height='85%' onClick={this.clickImage}/>
 							<h6 style={textStyle}>{this.props.styleName}</h6>
