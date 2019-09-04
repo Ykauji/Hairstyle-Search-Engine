@@ -90,6 +90,7 @@ class HairstyleGrid extends React.Component {
 							console.log(HAIRSTYLE_QUERY);
 								return data.hairstyles.map((hair,i) => (
 										<HairstyleBox 
+										id={hair.id}
 										imageName={hair.image} 
 										styleName={hair.name} 
 										description={hair.description} 
@@ -98,6 +99,7 @@ class HairstyleGrid extends React.Component {
 										thickness={hair.thickness}
 										color={hair.color} 
 										perm={hair.perm}
+										likes={hair.likes}
 										key={i}/>
 								))
 						}}

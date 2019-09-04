@@ -50,6 +50,8 @@ class HairstyleBox extends React.Component {
 						thickness: this.props.thickness,
 						curliness: this.props.perm,
 						color: this.props.color,
+						likes: this.props.likes,
+						id: this.props.id,
 					}
 					
 				}}>
