@@ -41,6 +41,11 @@ let HAIRSTYLE_QUERY = gql`
 				image
 				description
 			}
+			images {
+				id 
+				hair_id
+				hair_url
+			}
 		}
 	}
 `;
@@ -100,6 +105,7 @@ class HairstyleGrid extends React.Component {
 										color={hair.color} 
 										perm={hair.perm}
 										likes={hair.likes}
+										images={hair.images}
 										key={i}/>
 								))
 						}}

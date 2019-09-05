@@ -153,9 +153,9 @@ class VerticalScrollingPictureGrid extends React.Component {
 			</div>
 			<div className='otherContent'>
 			  <img style={imageStyle} src={this.props.image}/>
-			  <img style={imageStyle} src="https://images.unsplash.com/photo-1497470288371-3a7b5a82a048?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
-			  <img style={imageStyle} src="https://images.unsplash.com/photo-1519678446913-040d6fcbf3d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="shom"/>
-			  <img style={imageStyle} src="https://images.unsplash.com/photo-1512232207266-d100b35fd4de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/>
+			  {this.props.images.map((hair,i) => (
+			  	<img style={imageStyle} src={hair.hair_url}/>
+			  ))}
 			</div>
 		</div>
 		)

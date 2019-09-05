@@ -38,6 +38,7 @@ class HairstylePage extends React.Component {
 				 curliness={this.props.location.state.curliness !== undefined ? this.props.location.state.curliness : notFound}
 				 color={this.props.location.state.color !== undefined ? this.props.location.state.color : notFound}
 				 likes={this.state.likes}
+				 images={this.props.location.state.images}
 				 changeInLikes={this.changeInLikes}
 				 />
 			)

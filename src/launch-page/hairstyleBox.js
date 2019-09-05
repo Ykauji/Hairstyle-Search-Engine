@@ -52,6 +52,7 @@ class HairstyleBox extends React.Component {
 						color: this.props.color,
 						likes: this.props.likes,
 						id: this.props.id,
+						images: this.props.images,
 					}
 					
 				}}>
