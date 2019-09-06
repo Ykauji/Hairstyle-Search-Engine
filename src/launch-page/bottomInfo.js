@@ -1,8 +1,16 @@
 import React from 'react'
 
 class BottomInfo extends React.Component {
-	render() {
+	constructor() {
+		super();
+	}
 
+	render() {
+		return(
+			<div>
+			
+			</div>
+		)
 	}
 
 	

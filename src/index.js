@@ -28,21 +28,6 @@ const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
 });
 
-
-// Query for hairstyles
-
-
-// Random line. 
-const line = {
-	color: '#000000',
-	width: '25%',
-	backgroundColor: '#000000',
-	height: .05,
-	position: 'relative',
-	top: '-100px',
-	borderColor : '#000000',
-}
-
 ReactDOM.render(
 	<ApolloProvider client={client}>
 		<Router>

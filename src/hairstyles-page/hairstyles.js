@@ -19,14 +19,27 @@ class HairstylesPage extends React.Component {
 			perm: undefined,
 		}
 	}
-
+	
 	handleDropdownChange(event) {
-		console.log("poatto");
 		this.setState((oldValues) => {
 			return {[event.target.name]: event.target.value}
 		});
 	}
-	
+
+	componentDidMount() {
+		if (!this.props.location.state) return;
+		this.setState((prev) => {
+			return {gender: this.props.location.state.gender}
+		})
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+	  if (!this.props.location.state) return;
+	  if (prevState.gender !== this.props.location.state.gender) {
+	    this.setState({gender: this.props.location.state.gender})
+  	  }
+	}
+
 	render() {
 		const browseText = {
 			color: 'black',
@@ -35,13 +48,12 @@ class HairstylesPage extends React.Component {
 
 		const gridStyle = {
 			position: 'relative',
-			top: '110px',
+			top: '150px',
 		}
 
 		return (
 			<div>
 				<NavBar />
-				<h2 style={browseText}>Browse Hairstyles!</h2>
 				<DropdownGrid parentState={this.state} handleDropdownChange={this.handleDropdownChange.bind(this)}/>
 				<div style={gridStyle}>
 					<HairstyleGrid queryState={this.state}/>

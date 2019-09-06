@@ -30,13 +30,13 @@ class ImageHeader extends React.Component {
 			position: 'relative',
 			color: 'rgba(239, 239, 239, 1)',
 			width: '300px',
-			height: '65px',
-			background: 'rgba(135, 255, 255, .5)',
+			height: '50px',
+			background: 'rgba(135, 255, 255, .7)',
 			top: '-180px',
 			left: '40%',
 			justifyContent: 'center',
 			textAlign: 'center',
-			font: 'bold 24px/45px Helvetica, Sans-Serif',
+			font: 'bold 20px/40px Helvetica, Sans-Serif',
 		}
 		/*<img src={this.props.image} alt="jiji is a fool" style={{width: '85%',height: '600px', marginLeft: 'auto', marginRight: 'auto', display: 'block'}} />*/
 		return (

@@ -12,6 +12,7 @@ class HairstylePage extends React.Component {
 	}
 	
 	componentDidMount() {
+		if (this.props.location)
 		this.setState({likes: this.props.location.state.likes},() => this.setState({propsLoaded: true}));
 	}
 	

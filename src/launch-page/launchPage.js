@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ImageHeader from './imageHeader'
-import BottomBar from './bottomBar'
+import BottomInfo from './bottomInfo'
 import NavBar from './navBar'
 import HairstyleGrid from './hairstyleGrid'
 import Slider from './image-slider/slider'
@@ -13,11 +13,12 @@ class LaunchPage extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{backgroundColor: '#FFFFFF'}}>
 				<NavBar />
-				<ImageHeader image='./hairombre.jpeg' overlayText=''/>
-				<HairstyleGrid/>
-				<BottomBar />
+				<div style={{position: 'relative', top: '50px'}}>
+					<ImageHeader image='./hairombre.jpeg' overlayText=''/>
+				</div>
+				<BottomInfo/>
 			</div>
 		)
 	}
