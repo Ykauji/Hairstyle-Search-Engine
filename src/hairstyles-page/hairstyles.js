@@ -49,6 +49,7 @@ class HairstylesPage extends React.Component {
 		const gridStyle = {
 			position: 'relative',
 			top: '150px',
+			margin: 'auto'
 		}
 
 		return (

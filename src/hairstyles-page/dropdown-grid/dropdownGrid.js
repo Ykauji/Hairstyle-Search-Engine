@@ -38,6 +38,7 @@ class DropdownGrid extends React.Component {
     		flexWrap: "wrap",
     		position: "relative",
     		top: '20px',
+    		margin: 'auto',
 		}
 
 		const formControl = {
