@@ -45,15 +45,15 @@ class HairstylesPage extends React.Component {
 			color: 'black',
 			textAlign: 'center',
 		}
-
+		
 		const gridStyle = {
 			position: 'relative',
-			top: '85px',
+			top: '40px',
 			margin: 'auto',
 		}
 		const gridStyle2 = {
 			position: 'relative',
-			top: '250px',
+			top: '205px',
 			margin: 'auto',
 		}
 

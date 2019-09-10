@@ -15,7 +15,7 @@ class LaunchPage extends React.Component {
 		return (
 			<div style={{backgroundColor: '#FFFFFF'}}>
 				<NavBar />
-				<div style={{position: 'relative', top: '150px'}}>
+				<div style={{position: 'relative', top: '75px'}}>
 					<ImageHeader image='./hairombre.jpeg' overlayText=''/>
 				</div>
 				<BottomInfo/>

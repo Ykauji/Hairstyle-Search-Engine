@@ -38,7 +38,7 @@ class HairstyleBox extends React.Component {
 		}
 
 		return (
-			<Grid item xs={3}>
+			<Grid item xs={2}>
 				<Link to={{
 					pathname: '/hairstyle',
 					state: {
@@ -56,7 +56,7 @@ class HairstyleBox extends React.Component {
 					}
 					
 				}}>
-					<Box border={1} borderColor='#D0D0D0' borderRadius={16} overflow='hidden' width='20vw' height='35vh' style={boxStyle}>
+					<Box border={1} borderColor='#D0D0D0' borderRadius={0} overflow='hidden'height='35vh' style={boxStyle}>
 							<img src={this.props.imageName} alt="hair" width='100%' height='85%' onClick={this.clickImage}/>
 							<h6 style={textStyle}>{this.props.styleName}</h6>
 					</Box> 

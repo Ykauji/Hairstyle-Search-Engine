@@ -87,7 +87,7 @@ class HairstyleGrid extends React.Component {
 		
 		return (
 			<div style={divStyle}>
-				<Grid className='parent' container>
+				<Grid className='parent' container spacing={1}>
 					<Query query={HAIRSTYLE_QUERY} variables={this.props.queryState || {}}>
 						{({ loading, error, data }) => {
 							if (loading) return <h4>Loading...</h4>
