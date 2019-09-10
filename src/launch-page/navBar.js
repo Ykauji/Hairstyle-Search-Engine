@@ -3,6 +3,8 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import SearchBar from 'material-ui-search-bar'
+import Grid from '@material-ui/core/Grid';
+import './hairstyleGrid.css'
 
 class NavBar extends React.Component {
 	constructor() {
@@ -14,7 +16,6 @@ class NavBar extends React.Component {
 		textAlign: 'left',
 		top: '-30px',
 		left: '10%',
-		fontSize: '25px',
 		position: 'absolute',
 		color: '#181818',
 		fontFamily: 'Helvitica Neue',
@@ -65,11 +66,10 @@ class NavBar extends React.Component {
 			fontWeight: 'bold',
 		}
 		const men = {
-			textAlign: 'center',
 			fontSize: '15px',
 			position: 'absolute',
-			top: '15px',
-			left: '350px',
+			top: '10px',
+			left: '20%',
 			padding: '0px',
 			margin: '0px',
 			color: '#181818',
@@ -79,8 +79,8 @@ class NavBar extends React.Component {
 			textAlign: 'center',
 			fontSize: '15px',
 			position: 'absolute',
-			top: '15px',
-			left: '450px',
+			top: '10px',
+			left: '30%',
 			padding: '0px',
 			margin: '0px',
 			color: '#181818',
@@ -89,14 +89,15 @@ class NavBar extends React.Component {
 		
 		const searchBar = {
 			position: 'absolute', 
-			maxWidth: '400px',
-			height: '80%',
-			top: '10%',
-			right: '20%',
+			maxWidth: '300px',
+			width: '20vw',
+			height: '35px',
+			top: '10px',
+			right: '40%',
 		}
 		
 		return (
-			<div style={{height: '50px', backgroundColor:'#FFFFFF', width: '100%', marginLeft: 'auto', marginRight: 'auto',position:'relative',top:'0px'}}>
+			<Grid container display="flex" direction="row" height='100px' spacing={1}>
 				<Link to="/" style={{color: '#F5F5DC'}}>
 						<h4 style={titleStyle}>InStyle</h4>
 				</Link>
@@ -105,7 +106,7 @@ class NavBar extends React.Component {
 					state: {
 						gender: 'male',
 					}}} 
-					style={{color: '#F5F5DC'}}>
+					style={men}>
 					<Button style={men}>Mens</Button>
 				</Link>
 
@@ -113,7 +114,7 @@ class NavBar extends React.Component {
 					state: {
 						gender: 'female',
 					}}} 
-					style={{color: '#F5F5DC'}}>
+					style={women}>
 					<Button style={women}>Women</Button>
 				</Link>
 
@@ -126,7 +127,7 @@ class NavBar extends React.Component {
 
 				<Button style={login}>Login</Button>
 				<Button style={register}>Register</Button>
-			</div>
+			</Grid>
 		)
 	}
 }

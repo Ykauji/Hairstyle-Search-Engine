@@ -48,14 +48,22 @@ class HairstylesPage extends React.Component {
 
 		const gridStyle = {
 			position: 'relative',
-			top: '150px',
-			margin: 'auto'
+			top: '200px',
+			margin: 'auto',
 		}
+		const gridStyle2 = {
+			position: 'relative',
+			top: '50px',
+			margin: 'auto',
+		}
+
 
 		return (
 			<div>
 				<NavBar />
-				<DropdownGrid parentState={this.state} handleDropdownChange={this.handleDropdownChange.bind(this)}/>
+				<div style={gridStyle2}>
+					<DropdownGrid parentState={this.state} handleDropdownChange={this.handleDropdownChange.bind(this)}/>
+				</div>
 				<div style={gridStyle}>
 					<HairstyleGrid queryState={this.state}/>
 				</div>

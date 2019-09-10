@@ -1,6 +1,5 @@
 .parent {
   display: flex;
-  height: 300px; /* Or whatever */
   direction: row;
   justify-content: flex-start;
   align-items: center;
@@ -11,7 +10,7 @@
 }
 
 .child {
-  width: 100px;  /* Or whatever */
-  height: 100px; /* Or whatever */
+  width: 10vw;  /* Or whatever */
+  height: 10vh; /* Or whatever */
   margin: auto;  /* Magic! */
 }
