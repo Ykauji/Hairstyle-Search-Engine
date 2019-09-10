@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import SearchBar from 'material-ui-search-bar'
 import Grid from '@material-ui/core/Grid';
-import './hairstyleGrid.css'
+import './navBar.css'
 
 class NavBar extends React.Component {
 	constructor() {
@@ -16,7 +16,7 @@ class NavBar extends React.Component {
 		textAlign: 'left',
 		top: '-3%',
 		left: '5%',
-		position: 'absolute',
+		position: 'fixed',
 		color: '#181818',
 		fontFamily: 'Helvitica Neue',
 		fontSize: '30px',
@@ -44,9 +44,9 @@ class NavBar extends React.Component {
 		
 		const login = {
 			textAlign: 'center',
-			fontSize: '15px',
+			fontSize: '10px',
 			position: 'fixed',
-			top: '20px',
+			top: '21px',
 			right: '13%',
 			paddingLeft: '20px',
 			paddingRight: '20px',
@@ -58,9 +58,9 @@ class NavBar extends React.Component {
 		// could have resued this!
 		const register = {
 			textAlign: 'center',
-			fontSize: '15px',
+			fontSize: '10px',
 			position: 'fixed',
-			top: '20px',
+			top: '21px',
 			right: '3%',
 			paddingLeft: '20px',
 			margin: '0px',
@@ -92,7 +92,7 @@ class NavBar extends React.Component {
 		}
 		
 		const searchBar = {
-			position: 'absolute', 
+			position: 'fixed', 
 			maxWidth: '300px',
 			width: '20vw',
 			height: '40px',
@@ -104,7 +104,7 @@ class NavBar extends React.Component {
 		}
 		
 		return (
-			<Grid container display="flex" align-content="flex-start" direction="row" height='100px' spacing={5}>
+			<Grid container className="parent" display="flex" align-content="flex-start" direction="row" height='100px' spacing={5}>
 				<Link to="/" style={{color: '#F5F5DC'}}>
 						<h4 style={titleStyle}>InStyle</h4>
 				</Link>
@@ -113,7 +113,7 @@ class NavBar extends React.Component {
 					state: {
 						gender: 'male',
 					}}} 
-					style={men}>
+					className="child">
 					<Button style={men}>Mens</Button>
 				</Link>
 

@@ -1,10 +1,21 @@
 .parent {
-  position: fixed;
-  background-color: 'black';
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
+.child {
+  width: 5vw;  /* Or whatever */
+  height: 5vh; /* Or whatever */
+  margin: auto;  /* Magic! */
 }
 
-.child {
-  width: 10vw;  /* Or whatever */
-  height: 10vh; /* Or whatever */
-  margin: auto;  /* Magic! */
+@media screen and (min-width: 480px) {
+  .child {
+    width: 2vw;
+    height: 2vh;
+    margin:auto;
+  }
+
 }

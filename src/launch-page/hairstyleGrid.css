@@ -2,15 +2,16 @@
   display: flex;
   direction: row;
   justify-content: flex-start;
-  align-items: center;
   position: relative;
+  z-index: 10;
   top: -100px;
-  background-color: 'black';
   margin: 0 auto;
+  z-index: 10;
 }
 
 .child {
   width: 10vw;  /* Or whatever */
   height: 10vh; /* Or whatever */
   margin: auto;  /* Magic! */
+  z-index: 10;
 }

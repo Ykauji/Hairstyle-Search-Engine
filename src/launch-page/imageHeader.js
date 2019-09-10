@@ -27,16 +27,19 @@ class ImageHeader extends React.Component {
 		}
 
 		const freeTrialButton = {
-			position: 'relative',
 			color: 'rgba(239, 239, 239, 1)',
-			width: '300px',
-			height: '50px',
+			width: '100%',
+			height: '8vh',
 			background: 'rgba(135, 255, 255, .7)',
-			top: '-180px',
-			left: '40%',
 			justifyContent: 'center',
 			textAlign: 'center',
 			font: 'bold 20px/40px Helvetica, Sans-Serif',
+		}
+		const buttonDiv = {
+			position: 'relative',
+			margin: 'auto',
+			width: '25%',
+			marginTop: '-100px',
 		}
 		/*<img src={this.props.image} alt="jiji is a fool" style={{width: '85%',height: '600px', marginLeft: 'auto', marginRight: 'auto', display: 'block'}} />*/
 		return (
@@ -45,7 +48,9 @@ class ImageHeader extends React.Component {
 					{/*<h6 style={imageText}><span style={spanStyle}>{this.props.overlayText}</span></h6>}*/}
 					<div style={{margin: 'auto'}}>
 						<Link to='/hairstyles' style={{ textDecoration: 'none' }}>
+							<div style={buttonDiv}>
 							<Button variant="contained" style={freeTrialButton}>Browse Now!</Button>
+							</div>
 						</Link>
 					</div>
 

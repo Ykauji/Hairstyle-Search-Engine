@@ -62,10 +62,15 @@ class HairstylePage extends React.Component {
 	}
 
 	render() {
+		const divStyle = {
+			marginTop: '0px',
+		}
 		return (
 			<div>
 				<NavBar/>
-				{this.isFromLink(this.props)}
+				<div style={divStyle}>
+					{this.isFromLink(this.props)}
+				</div>
 			</div>
 		)
 	}
