@@ -14,9 +14,6 @@ import HairstylePage from './hairstyle-page/hairstylePage'
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo'
 
-
-const env = process.env.NODE_ENV || 'development';
-
 // React Router DOM 
 import {
 	BrowserRouter as Router, 
@@ -26,17 +23,11 @@ import {
 	Redirect,
 } from 'react-router-dom'
 
-const client;
+const env = process.env.NODE_ENV || 'development';
 
-if (env !== 'development') {
-	client = new ApolloClient({
-		uri: 'https://morning-eyrie-90580.herokuapp.com/graphql',
-	});
-} else {
-	client = new ApolloClient({
-	  uri: 'http://localhost:5000/graphql',
-	});
-}
+const client = new ApolloClient({
+		uri: env !== 'development' ? 'https://morning-eyrie-90580.herokuapp.com/graphql' : 'http://localhost:5000/graphql',
+});
 
 
 
