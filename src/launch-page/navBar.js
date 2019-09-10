@@ -14,8 +14,8 @@ class NavBar extends React.Component {
 	render() {
 		const titleStyle = {
 		textAlign: 'left',
-		top: '-30px',
-		left: '10%',
+		top: '-3%',
+		left: '5%',
 		position: 'absolute',
 		color: '#181818',
 		fontFamily: 'Helvitica Neue',
@@ -45,59 +45,66 @@ class NavBar extends React.Component {
 		const login = {
 			textAlign: 'center',
 			fontSize: '15px',
-			position: 'absolute',
-			top: '15px',
-			right: '180px',
-			padding: '0px',
+			position: 'fixed',
+			top: '20px',
+			right: '13%',
+			paddingLeft: '20px',
+			paddingRight: '20px',
 			margin: '0px',
 			color: '#181818',
-			fontWeight: 'bold'
+			fontWeight: 'bold',
+			float: 'left',
 		}
 		// could have resued this!
 		const register = {
 			textAlign: 'center',
 			fontSize: '15px',
-			position: 'absolute',
-			top: '15px',
-			right: '50px',
-			padding: '0px',
+			position: 'fixed',
+			top: '20px',
+			right: '3%',
+			paddingLeft: '20px',
 			margin: '0px',
 			color: '#181818',
 			fontWeight: 'bold',
+			float: 'left',
 		}
 		const men = {
 			fontSize: '15px',
-			position: 'absolute',
-			top: '10px',
+			position: 'fixed',
+			top: '20px',
 			left: '20%',
-			padding: '0px',
 			margin: '0px',
 			color: '#181818',
 			fontWeight: 'bold',
+			paddingLeft: '20px',
 		}
 		const women = {
 			textAlign: 'center',
 			fontSize: '15px',
-			position: 'absolute',
-			top: '10px',
+			position: 'fixed',
+			top: '20px',
 			left: '30%',
-			padding: '0px',
 			margin: '0px',
 			color: '#181818',
 			fontWeight: 'bold',
+			paddingLeft: '20px',
+			paddingRight: '20px',
 		}
 		
 		const searchBar = {
 			position: 'absolute', 
 			maxWidth: '300px',
 			width: '20vw',
-			height: '35px',
-			top: '10px',
-			right: '40%',
+			height: '40px',
+			top: '15px',
+			right: '30%',
+			paddingLeft: '5px',
+			paddingRight: '20px',
+			float: 'left',
 		}
 		
 		return (
-			<Grid container display="flex" direction="row" height='100px' spacing={1}>
+			<Grid container display="flex" align-content="flex-start" direction="row" height='100px' spacing={5}>
 				<Link to="/" style={{color: '#F5F5DC'}}>
 						<h4 style={titleStyle}>InStyle</h4>
 				</Link>

@@ -1,0 +1,10 @@
+.parent {
+  position: fixed;
+  background-color: 'black';
+}
+
+.child {
+  width: 10vw;  /* Or whatever */
+  height: 10vh; /* Or whatever */
+  margin: auto;  /* Magic! */
+}

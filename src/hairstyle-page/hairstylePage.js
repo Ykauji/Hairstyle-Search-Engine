@@ -26,6 +26,7 @@ class HairstylePage extends React.Component {
 	isFromLink(props) {
 		console.log(props)
 		const notFound = "N/A"
+
 		if (!this.state.propsLoaded) return null;
 		if (this.props.location.state !== undefined) {
 			return (
